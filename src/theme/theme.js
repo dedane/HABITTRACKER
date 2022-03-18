@@ -2,9 +2,9 @@ import { createMuiTheme } from '@material-ui/core';
 import { getColor } from './colors';
 
 // Get constant variables
-const defaultPrimaryColor = getColor(process.env.REACT_APP_THEME_PRIMARY_COLOR);
+const defaultPrimaryColor = getColor('purple');
 const defaultSecondaryColor = getColor(
-  process.env.REACT_APP_THEME_SECONDARY_COLOR
+  'indigo'
 );
 const defaultDark = process.env.REACT_APP_THEME_DARK === 'true';
 

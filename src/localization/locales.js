@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { enGB, enUS, es, pl } from 'date-fns/locale';
+import { enGB, enUS,  } from 'date-fns/locale';
 
-import { ReactComponent as SpainFlagSvg } from 'icons/spain.svg';
+
 import { ReactComponent as UnitedKingdomFlagSvg } from 'icons/united-kingdom.svg';
 import { ReactComponent as UnitedStatesFlagSvg } from 'icons/united-states.svg';
 
@@ -10,7 +10,6 @@ const defaultLocale = enUS;
 
 // Available locales
 const locales = [
-  { code: 'es', label: 'Español', icon: <SpainFlagSvg />, import: es },
   {
     code: 'en-US',
     label: 'English US',
