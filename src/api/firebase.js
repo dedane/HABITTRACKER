@@ -4,26 +4,28 @@ import 'firebase/auth';
 import 'firebase/database';
 import 'firebase/firestore';
 
-const config = {
-  apiKey: "AIzaSyAz3e79qUVzhZUxOozgFXJkyIRy9sZtKIY",
-  authDomain: "reactive-ed93c.firebaseapp.com",
-  databaseURL: "https://reactive-ed93c-default-rtdb.firebaseio.com",
-  projectId: "reactive-ed93c",
-  storageBucket: "reactive-ed93c.appspot.com",
-  messagingSenderId: "1013498342049",
-  appId: "1:1013498342049:web:687e442473e4a4afb09ee0",
-  measurementId: "G-368E06QP65"
+const firebaseConfig = {
+  apiKey: "AIzaSyBHLmRffRtPwXDi8wOj40CN93R4se_GqOE",
+  authDomain: "habittracker-c7cee.firebaseapp.com",
+  databaseURL: "https://habittracker-c7cee-default-rtdb.firebaseio.com/",
+  projectId:"habittracker-c7cee",
+  storageBucket: "habittracker-c7cee.appspot.com",
+  messagingSenderId: "839491567874",
+  appId:"1:839491567874:web:db6d3f74c7a91e95e0021b",
+  measurementId: "G-12Y57PW3BL"
 };
 
-class Firebase {
-  constructor() {
-    firebase.initializeApp(config);
-
-    this.firebase = firebase;
-    this.auth = firebase.auth();
-    this.firestore = firebase.firestore();
-    this.db = firebase.database();
-  }
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+} else {
+  firebase.app();
 }
 
-export default Firebase;
+const app = {
+  firebase,
+  auth: firebase.auth(),
+  firestore: firebase.firestore(),
+  db: firebase.database(),
+};
+
+export default app;

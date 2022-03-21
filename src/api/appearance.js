@@ -94,4 +94,3 @@ export function useRemoveTheme() {
     return db.ref(`users/${user.uid}/theme`).remove();
   };
 }
-
